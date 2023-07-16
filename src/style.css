@@ -8,6 +8,7 @@
     height: 100vh;
     background-image:url("image/two.jpg");
     background-size: cover;
+    background-repeat: repeat-x;
 }
 .animal{
 
