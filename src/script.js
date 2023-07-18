@@ -1,5 +1,5 @@
 var animal = document.getElementById("animal");
-idleImageNumber = 0;
+idleImageNumber = 1;
 idleAnimationNumber=0;
 function idleAnimation() {
 
@@ -17,7 +17,7 @@ function idleAnimationStart() {
     
    idleAnimationNumber= setInterval(idleAnimation, 200);
 }
-runImageNumber= 0;
+runImageNumber= 1  ;
 runAnimationNumber= 0;
 function runAnimation(){
     runImageNumber=runImageNumber + 1;
@@ -43,9 +43,10 @@ if(keyCode == 13){
 if(runAnimationNumber == 0){
  runAnimationStart();
 }
- }
+
 if(moveBackgroundAnimationId==0){
     moveBackgroundAnimationId = setInterval(moveBackground,100);
+}
 }
 
 }
