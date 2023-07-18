@@ -34,9 +34,22 @@ function runAnimationStart(){
 }
 jumpImageNumber=1;
 jumpAnimationNumber=0;
+animalMarginTop =  380;
 function jumpAnimation(){
 
     jumpImageNumber=jumpImageNumber +1;
+
+ if(jumpImageNumber <= 6){
+    animalMarginTop = animalMarginTop - 20;
+    animal.style.marginTop = animalMarginTop + "px";
+ }
+ if(jumpImageNumber >= 7){
+    animalMarginTop = animalMarginTop + 20;
+    animal.style.marginTop = animalMarginTop + "px";
+ }
+
+
+
     if(jumpImageNumber == 11){
         jumpImageNumber =1;
         clearInterval(jumpAnimationNumber);
