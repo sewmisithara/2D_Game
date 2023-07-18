@@ -32,10 +32,34 @@ function runAnimationStart(){
    runAnimationNumber = setInterval(runAnimation,100);
    clearInterval(idleAnimationNumber);
 }
+jumpImageNumber=1;
+jumpAnimationNumber=0;
+function jumpAnimation(){
+
+    jumpImageNumber=jumpImageNumber +1;
+    if(jumpImageNumber == 11){
+        jumpImageNumber =1;
+        clearInterval(jumpAnimationNumber);
+        jumpAnimationNumber=0;
+        runImageNumber=0;
+        runAnimationStart();
+    }
+    animal.src = "image/jump (" + jumpImageNumber + ").png"; 
+
+}
+
+function jumpAnimationStart(){
+
+  clearInterval(idleAnimationNumber);
+  runImageNumber=0;  
+  clearInterval(runAnimationNumber);
+  jumpAnimationNumber=setInterval(jumpAnimation,100); 
+}
 
 function keyCheck(event){
 //alert(event.which);
 //enter=13;
+//space=32;
 
 var keyCode=event.which;
 
@@ -46,10 +70,25 @@ if(runAnimationNumber == 0){
 
 if(moveBackgroundAnimationId==0){
     moveBackgroundAnimationId = setInterval(moveBackground,100);
-}
-}
+      }
+    } 
 
-}
+    if(keyCode == 32){
+        if(jumpAnimationNumber == 0){
+        
+            jumpAnimationStart();
+        }
+        if(moveBackgroundAnimationId==0){
+            moveBackgroundAnimationId = setInterval(moveBackground,100);
+        
+        }
+        
+        }
+
+  }
+
+
+
 
 var backgroundImagePositionX = 0;
 var moveBackgroundAnimationId= 0;
