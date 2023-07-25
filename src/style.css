@@ -9,10 +9,20 @@
     background-image:url("image/new.jpg");
     background-size: cover;
     background-repeat: repeat-x;
+    overflow: hidden;
+    position: absolute;
 }
 .animal{
 
     height: 240px;
     margin-top: 380px;
     position: absolute;
+}
+.box{
+width: 100px;
+height: 100px;
+background-color: red;
+position: absolute;
+margin-top: 440px;
+
 }
