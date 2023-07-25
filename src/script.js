@@ -40,11 +40,11 @@ function jumpAnimation(){
     jumpImageNumber=jumpImageNumber +1;
 
  if(jumpImageNumber <= 6){
-    animalMarginTop = animalMarginTop - 20;
+    animalMarginTop = animalMarginTop - 55;
     animal.style.marginTop = animalMarginTop + "px";
  }
  if(jumpImageNumber >= 7){
-    animalMarginTop = animalMarginTop + 20;
+    animalMarginTop = animalMarginTop + 55;
     animal.style.marginTop = animalMarginTop + "px";
  }
 
@@ -116,7 +116,7 @@ function moveBackground(){
     backgroundImagePositionX = backgroundImagePositionX - 20;
     document.getElementById("background").style.backgroundPositionX = backgroundImagePositionX + "px";
 }
-boxMarginLeft = 2040;
+boxMarginLeft = 1540;
 function createBoxes(){
 
     for (var i=0; i<=10; i++){
@@ -128,12 +128,12 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +1000;
+boxMarginLeft= boxMarginLeft +2000;
 
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+500;
+    boxMarginLeft=boxMarginLeft+1000;
 }
 
 }
@@ -144,8 +144,23 @@ function boxAnimation(){
     for(var i=0; i<10; i++){
         var box = document.getElementById("box"+i);
         var currentMarginLeft = getComputedStyle(box).marginLeft;
-        var newMarginLeft =parseInt(currentMarginLeft)- 25;
+        var newMarginLeft =parseInt(currentMarginLeft)- 35;
         box.style.marginLeft=newMarginLeft +"px";
+
+        if(newMarginLeft >= -110 & newMarginLeft <=100){
+            if(animalMarginTop > 300){
+                clearInterval(boxAnimationId);
+        
+                clearInterval(runAnimationNumber);
+                runAnimationNumber = -1;
+        
+                clearInterval(jumpAnimationNumber);
+                jumpAnimationNumber=-1;
+                clearInterval(moveBackgroundAnimationId);
+                moveBackgroundAnimationId=-1;
+            }
+        }
 
     }
 }
+
