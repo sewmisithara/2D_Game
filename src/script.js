@@ -84,6 +84,9 @@ if(runAnimationNumber == 0){
 if(moveBackgroundAnimationId==0){
     moveBackgroundAnimationId = setInterval(moveBackground,100);
       }
+      if(boxAnimationId==0){
+        boxAnimationId=setInterval(boxAnimation,100);
+      }
     } 
 
     if(keyCode == 32){
@@ -95,6 +98,9 @@ if(moveBackgroundAnimationId==0){
             moveBackgroundAnimationId = setInterval(moveBackground,100);
         
         }
+        if(boxAnimationId==0){
+            boxAnimationId=setInterval(boxAnimation,100);
+          }
         
         }
 
@@ -110,7 +116,7 @@ function moveBackground(){
     backgroundImagePositionX = backgroundImagePositionX - 20;
     document.getElementById("background").style.backgroundPositionX = backgroundImagePositionX + "px";
 }
-boxMarginLeft = 1040;
+boxMarginLeft = 2040;
 function createBoxes(){
 
     for (var i=0; i<=10; i++){
@@ -118,16 +124,28 @@ var box = document.createElement("div");
 box.className = "box";
 document.getElementById("background").appendChild(box);
 box.style.marginLeft = boxMarginLeft+"px";
+box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +500;
+boxMarginLeft= boxMarginLeft +1000;
 
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+250;
+    boxMarginLeft=boxMarginLeft+500;
 }
 
 }
+}
+
+var boxAnimationId= 0;
+function boxAnimation(){
+    for(var i=0; i<10; i++){
+        var box = document.getElementById("box"+i);
+        var currentMarginLeft = getComputedStyle(box).marginLeft;
+        var newMarginLeft =parseInt(currentMarginLeft)- 25;
+        box.style.marginLeft=newMarginLeft +"px";
+
+    }
 }

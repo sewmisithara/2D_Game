@@ -19,10 +19,13 @@
     position: absolute;
 }
 .box{
-width: 100px;
-height: 100px;
-background-color: red;
+width: 350px;
+height: 450px;
+/*background-color: red;*/
 position: absolute;
-margin-top: 440px;
+margin-top: 450px;
+background-image: url(image/dragon-attack.gif);
+background-size: contain;
+background-repeat: no-repeat;
 
 }
