@@ -158,9 +158,27 @@ function boxAnimation(){
                 jumpAnimationNumber=-1;
                 clearInterval(moveBackgroundAnimationId);
                 moveBackgroundAnimationId=-1;
+
+              deadAnimationNumber = setInterval(animalDeadAnimation,100);
             }
         }
 
     }
+}
+
+deadImageNumber =1
+deadAnimationNumber=0;
+function animalDeadAnimation(){
+    deadImageNumber=deadImageNumber + 1;
+
+    if(deadImageNumber==11){
+        deadImageNumber =10;
+    }
+
+
+animal.src = "image/dead (" + deadImageNumber + ").png";
+
+
+    
 }
 
