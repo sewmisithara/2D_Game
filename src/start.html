@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>start page</title>
+
+    <link rel="stylesheet" href="start.css">
+</head>
+
+<body class="body">
+   
+    <div class="background" id="background">
+        
+
+            <form action="index.html">
+            
+                
+                <button id="play"> play </button>
+            </form>
+</div>
+
+<audio id="song" > 
+
+    <source src="/src/media/Ninja.mp3" >
+</audio>
+<script> 
+
+window.addEventListener('click',() => {
+document.getElementById("song").play();
+
+});
+</script>
+   
+
+</body>
+</html>
