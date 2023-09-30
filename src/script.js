@@ -133,9 +133,12 @@ function moveBackground(){
     score =score +1;
     document.getElementById("score").innerHTML=score;
 
-    if(score==500){
+    if(score==50){
         document.getElementById("win").style.visibility="visible";
         document.getElementById("winScore").innerHTML=score;
+        
+        document.getElementById("songWin").play();
+        document.getElementById("song").pause();
         
 
     }
@@ -205,6 +208,10 @@ function animalDeadAnimation(){
 
         document.getElementById("end").style.visibility="visible";
         document.getElementById("endScore").innerHTML=score;
+       
+       
+
+            document.getElementById("song").play();
         
 
     }
