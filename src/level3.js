@@ -29,14 +29,12 @@ function runAnimation(){
     animal.src = "image/run (" + runImageNumber + ").png"; 
 }
 function runAnimationStart(){
-   runAnimationNumber = setInterval(runAnimation,90);
+   runAnimationNumber = setInterval(runAnimation,100);
    clearInterval(idleAnimationNumber);
 }
 jumpImageNumber=1;
 jumpAnimationNumber=0;
 animalMarginTop =  380;
-
-
 function jumpAnimation(){
 
     jumpImageNumber=jumpImageNumber +1;
@@ -63,21 +61,12 @@ function jumpAnimation(){
 
 }
 
-
-
 function jumpAnimationStart(){
-
-    
-    
 
   clearInterval(idleAnimationNumber);
   runImageNumber=0;  
   clearInterval(runAnimationNumber);
   jumpAnimationNumber=setInterval(jumpAnimation,100); 
-
- 
-
-   
 }
 
 function keyCheck(event){
@@ -132,16 +121,6 @@ function moveBackground(){
 
     score =score +1;
     document.getElementById("score").innerHTML=score;
-
-    if(score==500){
-        document.getElementById("win").style.visibility="visible";
-        document.getElementById("winScore").innerHTML=score;
-        
-
-    }
-
-
-
 }
 boxMarginLeft = 1540;
 function createBoxes(){
@@ -155,12 +134,12 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +1600;
+boxMarginLeft= boxMarginLeft +2000;
 
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+1600;
+    boxMarginLeft=boxMarginLeft+1000;
 }
 
 }
@@ -187,8 +166,6 @@ function boxAnimation(){
                 moveBackgroundAnimationId=-1;
 
               deadAnimationNumber = setInterval(animalDeadAnimation,100);
-
-              
             }
         }
 
@@ -219,5 +196,4 @@ function reload(){
 
     location.reload();
 }
-
 
