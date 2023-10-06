@@ -29,12 +29,14 @@ function runAnimation(){
     animal.src = "image/run (" + runImageNumber + ").png"; 
 }
 function runAnimationStart(){
-   runAnimationNumber = setInterval(runAnimation,100);
+   runAnimationNumber = setInterval(runAnimation,90);
    clearInterval(idleAnimationNumber);
 }
 jumpImageNumber=1;
 jumpAnimationNumber=0;
 animalMarginTop =  380;
+
+
 function jumpAnimation(){
 
     jumpImageNumber=jumpImageNumber +1;
@@ -61,12 +63,21 @@ function jumpAnimation(){
 
 }
 
+
+
 function jumpAnimationStart(){
+
+    
+    
 
   clearInterval(idleAnimationNumber);
   runImageNumber=0;  
   clearInterval(runAnimationNumber);
   jumpAnimationNumber=setInterval(jumpAnimation,100); 
+
+ 
+
+   
 }
 
 function keyCheck(event){
@@ -121,6 +132,19 @@ function moveBackground(){
 
     score =score +1;
     document.getElementById("score").innerHTML=score;
+
+    if(score==50){
+        document.getElementById("win").style.visibility="visible";
+        document.getElementById("winScore").innerHTML=score;
+        
+        document.getElementById("songWin").play();
+        document.getElementById("song").pause();
+        
+
+    }
+
+
+
 }
 boxMarginLeft = 1540;
 function createBoxes(){
@@ -139,7 +163,7 @@ boxMarginLeft= boxMarginLeft +700;
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+700;
+    boxMarginLeft=boxMarginLeft+500;
 }
 
 }
@@ -166,6 +190,8 @@ function boxAnimation(){
                 moveBackgroundAnimationId=-1;
 
               deadAnimationNumber = setInterval(animalDeadAnimation,100);
+
+              
             }
         }
 
@@ -182,6 +208,10 @@ function animalDeadAnimation(){
 
         document.getElementById("end").style.visibility="visible";
         document.getElementById("endScore").innerHTML=score;
+       
+       
+
+            document.getElementById("song").play();
         
 
     }
@@ -196,4 +226,5 @@ function reload(){
 
     location.reload();
 }
+
 
