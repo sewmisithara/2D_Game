@@ -151,7 +151,7 @@ function moveBackground(){
 
 
 }
-boxMarginLeft = 1540;
+boxMarginLeft = 900;
 function createBoxes(){
 
     for (var i=0; i<=10; i++){
@@ -163,15 +163,38 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +1400;
+boxMarginLeft= boxMarginLeft +500;
 
 }
+
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+1400;
+    boxMarginLeft=boxMarginLeft+1000;
 }
 
+
 }
+
+for (var i=0; i<=10; i++){
+    var box = document.createElement("div");
+    box.className = "boxOne";
+    document.getElementById("background").appendChild(box);
+    box.style.marginLeft = boxMarginLeft+"px";
+    box.id =".boxOne" + i;
+    //boxMarginLeft=boxMarginLeft+1000;
+    
+    if(i<5){
+    boxMarginLeft= boxMarginLeft +500;
+    
+    }
+    
+    if(i>=5){
+    
+        boxMarginLeft=boxMarginLeft+1000;
+    }
+    
+    
+    }
 }
 
 var boxAnimationId= 0;
@@ -202,6 +225,39 @@ function boxAnimation(){
 
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 deadImageNumber =1
 deadAnimationNumber=0;

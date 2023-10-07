@@ -9,8 +9,8 @@
     background-image:url("image/ne.jpg");
     background-size: cover;
     background-repeat: repeat-x;
-    overflow: hidden;
-    position: absolute;
+    /* overflow: hidden;
+    position: absolute; */
 }
 .animal{
 
@@ -24,9 +24,24 @@ height: 280px;
 /*background-color: red;*/
 position: absolute;
 margin-top: 450px;
-background-image: url(image/dragon-attack.gif);
+background-image: url(image/rock.png);
 background-size: contain;
 background-repeat: no-repeat;
+
+}
+
+.boxOne{
+    width: 280px;
+    height: 280px;
+    /*background-color: red;*/
+    position: absolute;
+    margin-top: 450px;
+    background-image: url(image/Zombi.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+
 
 }
 .score{
