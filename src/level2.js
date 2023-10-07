@@ -27,6 +27,7 @@ function runAnimation(){
 
 
     animal.src = "image/run (" + runImageNumber + ").png"; 
+    document.getElementById("runnig").play();
 }
 function runAnimationStart(){
    runAnimationNumber = setInterval(runAnimation,90);
