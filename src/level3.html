@@ -15,18 +15,51 @@
 
         <div class="score" id="score">0</div>
     </div>
-
+ <!---------------------------------------------------------game over page------------------------------------------------------------ -->
     <div class="end" id="end">
         <div style="color: rgb(255, 11, 11);">Game over</div>
         <div style="color: rgb(221, 36, 12);">your Score</div>
         <div style="color: rgb(160, 46, 31);" id="endScore">0</div>
         <button class="btn" onclick="reload();">Try Again</button>
+        <audio id="song" > 
 
+            <source src="/src/media/game incoplited.mp3" >
+        </audio>
+       </div>
+
+
+       <!-- ---------------------------------------First level levelComplited page------------------------------------------------------------ -->
+
+    <div class="win" id="win">
+        <div style="color: rgb(11, 255, 182);">FirstLevelComplete</div>
+        <div style="color: rgb(12, 221, 155);">your Score</div>
+        <div style="color: rgb(31, 160, 141);" id="winScore">0</div>
       
+        <form action="level2.html">
+            
+            <button class="btn"> welecome 2nd level</button>     
+            
+        </form>
+
+        <audio id="songWin" > 
+
+            <source src="/src/media/levelComplited.wav" >
+        </audio>
 
      
 
     </div>
+    
+    
+
+    <audio id="songs" > 
+
+        <source src="/src/media/jump.mp3" >
+    </audio>
+
+   
+
+
 
     <script src="level3.js"></script>
 </body>

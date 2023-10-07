@@ -26,7 +26,9 @@ function runAnimation(){
     }
 
 
-    animal.src = "image/run (" + runImageNumber + ").png"; 
+    animal.src = "image/run (" + runImageNumber + ").png";
+    
+    document.getElementById("runnig").play();
 }
 function runAnimationStart(){
    runAnimationNumber = setInterval(runAnimation,90);
@@ -60,6 +62,9 @@ function jumpAnimation(){
         runAnimationStart();
     }
     animal.src = "image/jump (" + jumpImageNumber + ").png"; 
+
+    
+    document.getElementById("songs").play();
 
 }
 
@@ -133,7 +138,7 @@ function moveBackground(){
     score =score +1;
     document.getElementById("score").innerHTML=score;
 
-    if(score==50){
+    if(score==300){
         document.getElementById("win").style.visibility="visible";
         document.getElementById("winScore").innerHTML=score;
         
@@ -158,12 +163,12 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +1600;
+boxMarginLeft= boxMarginLeft +1400;
 
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+1600;
+    boxMarginLeft=boxMarginLeft+1400;
 }
 
 }

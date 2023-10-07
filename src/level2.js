@@ -60,6 +60,8 @@ function jumpAnimation(){
         runAnimationStart();
     }
     animal.src = "image/jump (" + jumpImageNumber + ").png"; 
+    
+    document.getElementById("songs").play();
 
 }
 
@@ -133,7 +135,7 @@ function moveBackground(){
     score =score +1;
     document.getElementById("score").innerHTML=score;
 
-    if(score==50){
+    if(score==300){
         document.getElementById("win").style.visibility="visible";
         document.getElementById("winScore").innerHTML=score;
         
@@ -158,12 +160,12 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<5){
-boxMarginLeft= boxMarginLeft +700;
+boxMarginLeft= boxMarginLeft +600;
 
 }
 if(i>=5){
 
-    boxMarginLeft=boxMarginLeft+500;
+    boxMarginLeft=boxMarginLeft+600;
 }
 
 }
