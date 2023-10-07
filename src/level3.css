@@ -6,7 +6,7 @@
 
     width: 100%;
     height: 100vh;
-    background-image:url("image/for.PNG");
+    background-image:url("image/ne.jpg");
     background-size: cover;
     background-repeat: repeat-x;
     overflow: hidden;
@@ -15,7 +15,7 @@
 .animal{
 
     height: 240px;
-    margin-top: 450px;
+    margin-top: 380px;
     position: absolute;
 }
 .box{
@@ -23,8 +23,8 @@ width: 280px;
 height: 280px;
 /*background-color: red;*/
 position: absolute;
-margin-top: 650px;
-background-image: url(image/Zombi.gif);
+margin-top: 450px;
+background-image: url(image/dragon-attack.gif);
 background-size: contain;
 background-repeat: no-repeat;
 
