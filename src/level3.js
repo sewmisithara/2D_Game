@@ -144,7 +144,7 @@ function createBoxes() {
     //boxMarginLeft=boxMarginLeft+1000;
 
     if (i <= 3) {
-      boxMarginLeft = boxMarginLeft + 500;
+      boxMarginLeft = boxMarginLeft + 900;
     }
   }
 
@@ -157,7 +157,7 @@ function createBoxes() {
     //boxMarginLeft=boxMarginLeft+1000;
 
     if (i <= 3) {
-      boxMarginLeft = boxMarginLeft + 500;
+      boxMarginLeft = boxMarginLeft + 1200;
     }
   }
 }

@@ -152,7 +152,7 @@ function moveBackground(){
 boxMarginLeft = 1540;
 function createBoxes(){
 
-    for (var i=0; i<=10; i++){
+    for (var i=0; i<=30; i++){
 var box = document.createElement("div");
 box.className = "box";
 document.getElementById("background").appendChild(box);
@@ -160,13 +160,13 @@ box.style.marginLeft = boxMarginLeft+"px";
 box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
-if(i<5){
-boxMarginLeft= boxMarginLeft +600;
+if(i<15){
+boxMarginLeft= boxMarginLeft +700;
 
 }
-if(i>=5){
+if(i>=15){
 
-    boxMarginLeft=boxMarginLeft+600;
+    boxMarginLeft=boxMarginLeft+700;
 }
 
 }
@@ -174,7 +174,7 @@ if(i>=5){
 
 var boxAnimationId= 0;
 function boxAnimation(){
-    for(var i=0; i<10; i++){
+    for(var i=0; i<30; i++){
         var box = document.getElementById("box"+i);
         var currentMarginLeft = getComputedStyle(box).marginLeft;
         var newMarginLeft =parseInt(currentMarginLeft)- 35;
