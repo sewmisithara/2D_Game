@@ -35,9 +35,21 @@
   /*background-color: red;*/
   position: absolute;
   margin-top: 450px;
-  background-image: url(image/Zombi.gif);
+  background-image: url(image/fire.gif);
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+
+  .boxTwo {
+    width: 280px;
+    height: 280px;
+    /*background-color: red;*/
+    position: absolute;
+    margin-top: 450px;
+    background-image: url(image/Zombi.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
  
 }
 .score {

@@ -147,6 +147,19 @@ function createBoxes() {
       boxMarginLeft = boxMarginLeft + 500;
     }
   }
+
+  for (var i = 0; i <= 3; i++) {
+    var boxTwo = document.createElement("div");
+    boxTwo.className = "boxTwo";
+    document.getElementById("background").appendChild(boxTwo);
+    boxTwo.style.marginLeft = boxMarginLeft + "px";
+    boxTwo.id = "boxTwo" + i;
+    //boxMarginLeft=boxMarginLeft+1000;
+
+    if (i <= 3) {
+      boxMarginLeft = boxMarginLeft + 500;
+    }
+  }
 }
 
 var boxAnimationId = 0;
@@ -180,6 +193,30 @@ function boxAnimation() {
     var currentMarginLeft = getComputedStyle(boxOne).marginLeft;
     var newMarginLeft = parseInt(currentMarginLeft) - 35;
     boxOne.style.marginLeft = newMarginLeft + "px";
+
+    if ((newMarginLeft >= -110) & (newMarginLeft <= 100)) {
+      if (animalMarginTop > 300) {
+        clearInterval(boxAnimationId);
+
+        clearInterval(runAnimationNumber);
+        runAnimationNumber = -1;
+
+        clearInterval(jumpAnimationNumber);
+        jumpAnimationNumber = -1;
+        clearInterval(moveBackgroundAnimationId);
+        moveBackgroundAnimationId = -1;
+
+        deadAnimationNumber = setInterval(animalDeadAnimation, 100);
+      }
+    }
+  }
+
+
+  for (var i = 0; i <= 3; i++) {
+    var boxTwo = document.getElementById("boxTwo" + i);
+    var currentMarginLeft = getComputedStyle(boxTwo).marginLeft;
+    var newMarginLeft = parseInt(currentMarginLeft) - 35;
+    boxTwo.style.marginLeft = newMarginLeft + "px";
 
     if ((newMarginLeft >= -110) & (newMarginLeft <= 100)) {
       if (animalMarginTop > 300) {
