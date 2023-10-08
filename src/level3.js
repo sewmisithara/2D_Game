@@ -120,18 +120,7 @@ function moveBackground() {
 
 boxMarginLeft = 900;
 function createBoxes() {
-  for (var i = 0; i <= 3; i++) {
-    var boxOne = document.createElement("div");
-    boxOne.className = "boxOne";
-    document.getElementById("background").appendChild(boxOne);
-    boxOne.style.marginLeft = boxMarginLeft + "px";
-    boxOne.id = "boxOne" + i;
-    //boxMarginLeft=boxMarginLeft+1000;
-
-    if (i <= 3) {
-      boxMarginLeft = boxMarginLeft + 500;
-    }
-  }
+  
 
   for (var i = 0; i <= 3; i++) {
     var box = document.createElement("div");
@@ -145,15 +134,30 @@ function createBoxes() {
       boxMarginLeft = boxMarginLeft + 500;
     }
   }
+
+  for (var i = 0; i <= 3; i++) {
+    var boxOne = document.createElement("div");
+    boxOne.className = "boxOne";
+    document.getElementById("background").appendChild(boxOne);
+    boxOne.style.marginLeft = boxMarginLeft + "px";
+    boxOne.id = "boxOne" + i;
+    //boxMarginLeft=boxMarginLeft+1000;
+
+    if (i <= 3) {
+      boxMarginLeft = boxMarginLeft + 500;
+    }
+  }
 }
 
 var boxAnimationId = 0;
 function boxAnimation() {
+  
+
   for (var i = 0; i <= 3; i++) {
-    var boxOne = document.getElementById("boxOne" + i);
-    var currentMarginLeft = getComputedStyle(boxOne).marginLeft;
+    var box = document.getElementById("box" + i);
+    var currentMarginLeft = getComputedStyle(box).marginLeft;
     var newMarginLeft = parseInt(currentMarginLeft) - 35;
-    boxOne.style.marginLeft = newMarginLeft + "px";
+    box.style.marginLeft = newMarginLeft + "px";
 
     if ((newMarginLeft >= -110) & (newMarginLeft <= 100)) {
       if (animalMarginTop > 300) {
@@ -171,12 +175,11 @@ function boxAnimation() {
       }
     }
   }
-
   for (var i = 0; i <= 3; i++) {
-    var box = document.getElementById("box" + i);
-    var currentMarginLeft = getComputedStyle(box).marginLeft;
+    var boxOne = document.getElementById("boxOne" + i);
+    var currentMarginLeft = getComputedStyle(boxOne).marginLeft;
     var newMarginLeft = parseInt(currentMarginLeft) - 35;
-    box.style.marginLeft = newMarginLeft + "px";
+    boxOne.style.marginLeft = newMarginLeft + "px";
 
     if ((newMarginLeft >= -110) & (newMarginLeft <= 100)) {
       if (animalMarginTop > 300) {
