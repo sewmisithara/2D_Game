@@ -109,7 +109,7 @@ function moveBackground() {
   score = score + 1;
   document.getElementById("score").innerHTML = score;
 
-  if (score == 300) {
+  if (score == 250) {
     document.getElementById("win").style.visibility = "visible";
     document.getElementById("winScore").innerHTML = score;
 
