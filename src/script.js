@@ -20,7 +20,7 @@ function idleAnimationStart() {
 runImageNumber= 1  ;
 runAnimationNumber= 0;
 function runAnimation(){
-    runImageNumber=runImageNumber + 1;
+    runImageNumber=runImageNumber + 1; 
     if (runImageNumber == 11) {
         runImageNumber = 1;
     }

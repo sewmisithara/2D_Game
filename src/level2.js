@@ -136,7 +136,7 @@ function moveBackground(){
     score =score +1;
     document.getElementById("score").innerHTML=score;
 
-    if(score==300){
+    if(score==220){
         document.getElementById("win").style.visibility="visible";
         document.getElementById("winScore").innerHTML=score;
         
@@ -161,12 +161,12 @@ box.id ="box" + i;
 //boxMarginLeft=boxMarginLeft+1000;
 
 if(i<15){
-boxMarginLeft= boxMarginLeft +700;
+boxMarginLeft= boxMarginLeft +800;
 
 }
 if(i>=15){
 
-    boxMarginLeft=boxMarginLeft+700;
+    boxMarginLeft=boxMarginLeft+800;
 }
 
 }
